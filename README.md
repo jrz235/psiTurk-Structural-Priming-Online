@@ -5,7 +5,7 @@ Standard psycholinguistic production structural priming task online using psiTur
 
 # requirements
 1. works best in Google Chrome - audio capture distorted in other browsers
-2. requires secure connection - I used OpenShift, but you can also use Amazon EC2 and an SSL Certificate
+2. requires secure connection - I used OpenShift, but you can also use Amazon EC2 and an SSL Certificate (refer to official psiTurk documentation)
 3. uses PHP to write files to secure respository: change 'SERVER URL' in 'static/js/script*.js' files (4 of them) to appropriate path
 4. change 'OPENSHIFT URL' in 'templates/ad.html' to OpenShift or EC2 path
 5. change 'LOGO URL' in 'templates/ad.html' to path where image (university shield, etc.) is hosted
@@ -16,6 +16,5 @@ Standard psycholinguistic production structural priming task online using psiTur
 2. change 'host' to IP address of hosting server
 
 # ***IMPORTANT***
-1. change all relevant text/contact info in 'templates/ad.html', 'templates/consent.html',
-and 'templates/postquestionnaire.html' (debriefing)
+1. change all relevant text/contact info in 'templates/ad.html', 'templates/consent.html', and 'templates/postquestionnaire.html' (debriefing)
 2. change contact email and organization name in 'config.txt' file
