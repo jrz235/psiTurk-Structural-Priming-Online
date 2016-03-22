@@ -1,0 +1,80 @@
+<script>
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
+</script>
+
+<script>
+var yourVideo = document.getElementById('video-control');
+function startvideo() {
+  yourVideo.play();
+}
+</script>
+
+<div id="container-instructions">
+
+    <h1>Practice</h1>
+
+    <hr>
+
+    <div class="instructions well">
+
+        <h2 align="center">Did you say "The woman spilled the milk"?</h2>
+
+        <br>
+
+        <p>
+            <strong>The correct answer to this question was "The woman spilled the milk," because the video shows a woman spilling milk. You may play the video again to see for yourself.</strong>
+        </p>
+        
+        <hr>
+
+        <p align="center"><strong>SPILL</strong></p>
+
+        <br>
+        
+        <div id="video" align="center"><video width=350 height=350 style="border:3px solid #32CD32; background:white" hspace=10 id="video-control">
+            <source src="static/video/The woman spilling the milk.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+                <br>
+
+                <button type="button" id="video-play-button" value="play" class="btn btn-success btn-lg" onclick="javascript:startvideo()">
+                Play Video <span id="play-span-vid" class="glyphicon glyphicon-play-circle"></span>
+                </button>
+
+        </div>
+
+        <hr>
+
+        <p>
+            Click "Next" to continue.
+        </p>
+
+        <script type="text/javascript">
+        //console.log(psiTurk.getInstructionIndicator())
+        </script>
+
+    </div>
+
+    <hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="javascript:endAudioStream();">
+                Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

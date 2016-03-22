@@ -1,0 +1,79 @@
+<script>
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
+</script>
+
+<script>
+var yourAudio = document.getElementById('audio-control');
+function startaudio() {
+  yourAudio.play();
+}
+</script>
+
+<div id="container-instructions">
+
+    <h1>Practice</h1>
+
+    <hr>
+
+    <div class="instructions well">
+
+        <h2 align="center">Did you pick the LEFT image?</h2>
+
+        <br>
+
+        <p>
+            <strong>The correct answer to this question was the LEFT ARROW KEY (&#8592;), because the audio recording described the image on the LEFT. You may play the audio file again to see for yourself.</strong>
+        </p>
+        
+        <hr>
+
+        <div id="stim" align="center"><img src="static/images/tickle.JPG" alt="Example Image" width=350 height=350 style="border:3px solid #00BFFF; background:white" hspace=10 /> <img src="static/images/ride.JPG" alt="Example Image" width=350 height=350 style="border:3px solid #00BFFF; background:white" hspace=10 /></div>
+
+        <br>
+
+        <div id="audio" align="center"><audio id="audio-control">
+            <source src="static/audio/The boy tickled the penguin.wav" type="audio/wav">
+            Your browser does not support the audio element.
+
+        </audio>
+
+                <button type="button" id="audio-play-button" value="play" class="btn btn-info btn-lg" onclick="javascript:startaudio()">
+                Play Audio <span id="play-span-aud" class="glyphicon glyphicon-play-circle"></span>
+                </button>
+
+        </div>
+
+        <hr>
+
+        <p>
+            Click "Next" to continue.
+        </p>
+
+        <script type="text/javascript">
+        //console.log(psiTurk.getInstructionIndicator())
+        </script>
+
+    </div>
+
+    <hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="javascript:endAudioStream();">
+                Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- 
+  The consent.html displays the text of your IRB-approved
+  consent form.  Even if you are not required to provide
+  a consent form, it is helpful to use this form to 
+  describe what people can do if an error comes up, etc...
+
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Psychology Experiment - Informed Consent Form</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+        <script type="text/javascript">
+            function onexit() {
+              self.close(); // no harm, no foul here
+            }
+        </script>
+        <script language="javascript">
+        	// var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+		    var is_explorer = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0);
+		    var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+		    var is_safari = (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1);
+		    var is_opera = navigator.userAgent.toLowerCase().indexOf('op') > -1;
+
+		    if (is_explorer || is_firefox || is_safari || is_opera){
+		    	alert("Your web browser is not supported. Please return the HIT for another Worker to complete.");
+		    	console.log("explorer: " + is_explorer);
+		    	console.log("firefox: " + is_firefox);
+		    	console.log("safari: " + is_safari);
+		    	console.log("opera: " + is_opera);
+		    } else{
+			    console.log("browser accepted");
+			}
+
+        	/* if (navigator.userAgent.indexOf('MSIE') != -1)
+				var detectIEregexp = /MSIE (\d+\.\d+);/ //test for MSIE x.x
+			else // if no "MSIE" string in userAgent
+				var detectIEregexp = /Trident.*rv[ :]*(\d+\.\d+)/ //test for rv:x.x or rv x.x where Trident string exists
+
+			var uagent = navigator.userAgent.toLowerCase();
+
+
+			if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){ //test for Firefox/x.x or Firefox x.x (ignoring remaining digits);
+				alert("Your web browser (Mozilla Firefox) is not supported. Please return the HIT for another Worker to complete.");
+			} else if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE{ 
+			    alert("Your web browser (Microsoft Internet Explorer) is not supported. Please return the HIT for another Worker to complete.");
+			} else if(/safari/.test(uagent) && !/chrome/.test(uagent)){
+				alert("Your web browser (Safari) is not supported. Please return the HIT for another Worker to complete.");
+			} else{
+			    console.log("browser accepted");
+			} */
+		</script>
+    </head>
+    <body>
+        <div id="container-consent">
+            <div id="consent">
+                <h1>We need your consent to proceed</h1>
+                <hr />
+                <p>
+                    Thank you for accepting the HIT. You have been invited to take part in a research study named <strong>Judging and Describing Events</strong>.
+                    </p>
+                <p>
+                    Please read this consent agreement carefully before deciding whether to participate in this study.
+                    </p>
+                <br>
+                <div class="legal well">
+                    <h3>Consent Form</h3>
+
+                    <hr>
+
+                    <p><strong>Purpose of the research:</strong></p>
+
+                    <p>This is part of a study examining how children understand and describe events. We are interested in what adult behavior is like so we can find out how these abilities change as a person develops. Because of the nature of this study, specific hypotheses and predictions cannot be divulged until after the experiment, at which time a detailed debriefing will be provided.</p>
+
+                    <p><strong>Eligibility:</strong></p>
+
+                    <p>A. Please ONLY participate in ONE of our HITs. DO NOT participate in this HIT if you have previously done one of our other HITs. If you have already participated, your work will be rejected (affecting your worker rating) and you WILL NOT be paid. (You can find out if you've participated previously by checking your account settings or qualifications. If you have done prior versions of this study, you will have a "Select Workers" qualification, so you are NOT eligible to participate in this study.)</p>
+
+                    <p>B. Please ONLY participate in this study if you are a native speaker of English. If English is not your first language, you are NOT elligible for this study.</p>
+
+                    <p>C. Please ONLY participate in this study if you are 18 years of age or older.</p>
+
+                    <p><strong>What you will do in this research:</strong></p>
+
+                    <p>You will hear audio files describing a series of events. Your job is to decide which of two (2) pictures best fits each description. Then you will watch short videos and describe them while recording yourself with your microphone.</p>
+
+                    <p>The study should take no longer than 15 minutes. You may do only one <strong>Judging and Describing Events</strong> HIT.</p>
+
+                    <p><strong>Risks and benefits:</strong></p>
+
+                    <p>There are no known risks associated with your participation in this research beyond those of everyday life. Although you will receive no direct benefits, this research may help the investigator understand how people understand and describe events.</p>
+
+                    <p><strong>Compensation:</strong></p>
+
+                    <p>You will be paid $1.00 to participate in the study.</p>
+
+                    <p><strong>Confidentiality:</strong></p>
+
+                    <p>Your participation in this study will remain confidential. We do not have access to your identity.</p>
+
+                    <p><strong>Participation and withdrawal:</strong></p>
+
+                    <p>Your participation in this study is completely voluntary, and you may withdraw at any time without penalty or loss of benefit to which you may otherwise be entitled.</p>
+
+                    <p><strong>Contact:</strong></p>
+
+                    <p>If there is anything about the study or your participation that is unclear or that you do not understand, or if you have other questions or wish to report a research-related problem, you may contact Jayden Ziegler at:</p>
+
+                        <ul>
+                        ziegler@g.harvard.edu
+                        </ul>
+
+                    <p>You can also contact our lab at:</p>
+
+                        <ul>
+                        1080 William James Hall
+                        <br>
+                        33 Kirkland Street
+                        <br>
+                        Cambridge, MA 02138
+                        <br>
+                        (617) 384-8357
+                        </ul>
+
+                    <p>The faculty member supervising this work is Jesse Snedeker (snedeker@wjh.harvard.edu).</p>
+
+                    <p>Whom to contact about your rights in this research, for questions, concerns, suggestions, or complaints that are not being addressed by the researcher, or research-related harm:</p>
+
+                        <ul>
+                        Committee on the Use of Human Subjects in Research at Harvard University
+                        <br>
+                        1414 Massachusetts Avenue, Second Floor
+                        <br>
+                        Cambridge, MA 02138
+                        <br>
+                        (617) 496-CUHS (2847)
+                        <br>
+                        cuhs@fas.harvard.edu
+                        </ul>
+
+                    <hr>
+
+                    <button type="button" class="btn btn-default btn-sm" onClick="window.print();">
+                    <span class="glyphicon glyphicon-print"></span> Please save or print a copy of this page for your records
+                    </button>
+                </div>
+
+                <hr />
+                <h4>Do you understand and consent to these terms?</h4>
+                <br />
+
+                <center>
+                    <button type="button" class="btn btn-primary btn-lg" onClick="window.location='/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}'">
+                    <span class="glyphicon glyphicon-ok"></span> I agree 
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger btn-lg" onClick="onexit()">
+                    <span class="glyphicon glyphicon-ban-circle"></span> No, thanks—I do not want to do this HIT
+                    </button>
+                </center>
+
+            </div>
+        </div>
+    </body>
+</html>
+

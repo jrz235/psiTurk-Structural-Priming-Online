@@ -1,0 +1,140 @@
+<script>
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
+</script>
+
+<script>
+var yourAudio = document.getElementById('audio-control');
+function startaudio() {
+  yourAudio.play();
+}
+var yourVideo = document.getElementById('video-control');
+function startvideo() {
+  yourVideo.play();
+}
+</script>
+
+<div id="container-instructions">
+
+	<h1>Important!</h1>
+
+	<hr>
+
+	<div class="instructions well">
+
+	    <p>
+		    <strong>This experiment requires the use of AUDIO and VIDEO PLAYBACK and AUDIO RECORDING using your microphone. Please perform the following tests before proceeding.</strong>
+	    </p>
+
+        <hr>
+
+        <p>
+            (1) Please make sure you can play the following audio file. To do so, click the "Play Audio" button. You may play this sample audio file as many times as you would like. <strong>However, during the task itself, you may only play each audio file once.</strong>
+        </p>
+	    
+        <br>
+
+        <div id="audio" align="center"><audio id="audio-control">
+            <source src="static/audio/test.wav" type="audio/wav">
+            Your browser does not support the audio element.
+
+        </audio>
+
+                <button type="button" id="audio-play-button" value="play" class="btn btn-info btn-lg" onclick="javascript:startaudio()">
+                Play Audio <span id="play-span-aud" class="glyphicon glyphicon-play-circle"></span>
+                </button>
+
+        </div>
+
+        <hr>
+
+        <p>
+            (2) Please make sure you can play the following video file. To do so, click the "Play Video" button. You may play this sample video as many times as you would like. <strong>However, during the task itself, you may only play each video once.</strong>
+        </p>
+
+        <br>
+
+        <div id="video" align="center"><video width=350 hspace=10 id="video-control">
+            <source src="static/video/test.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+                <br>
+
+                <button type="button" id="video-play-button" value="play" class="btn btn-success btn-lg" onclick="javascript:startvideo()">
+                Play Video <span id="play-span-vid" class="glyphicon glyphicon-play-circle"></span>
+                </button>
+
+        </div>
+
+        <hr>
+
+        <p>
+            (3) Please make sure you can record audio from your microphone. To do so, click the "Record" button and speak into your microphone. Then click "Stop" when you are finished. An audio file of your recording will then appear. Please play this file to make sure your voice was recorded properly. You may record yourself as many times as you would like. <strong>However, during the task itself, you may only make one recording per question.</strong>
+        </p>
+
+        <br>
+
+          <div id="recording" align="center">
+
+          <div id="buttons" align="center">
+
+          <button type="button" id="audio-record-button" value="play" class="btn btn-warning btn-lg" onclick="startRecording(this);">
+              Record <span id="rec-span-aud" class="glyphicon glyphicon-record"></span>
+              </button>
+
+          <button type="button" id="audio-stop-button" value="play" class="btn btn-warning btn-lg" onclick="stopRecording(this);" disabled>
+              Stop <span id="stop-span-aud" class="glyphicon glyphicon-stop"></span>
+              </button>
+
+          </div>
+
+          <br>
+          
+          <div id="recordingslist" align="center"></div>
+
+          <br>
+          
+          <pre id="output" align="center"></pre>
+
+          </div>
+
+        <hr>
+
+        <p>
+            <strong>Only proceed with the experiment if you were able to perform ALL THREE (3) of the above tasks. Otherwise, please exit the experiment window now.</strong>
+        </p>
+
+        <hr>
+
+        <p>
+            Click "Next" below to continue.
+        </p>
+
+	    <script type="text/javascript">
+	    //console.log(psiTurk.getInstructionIndicator())
+	    </script>
+
+      <script src="static/js/script_test.js"></script>
+
+	</div>
+
+	<hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            	<!-- no previous button on first screen -->
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="javascript:endAudioStream();">
+                Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,63 @@
+<script>
+//var played_aud=false;
+function startaudio() {
+  if(document.getElementById('audio-play-button').value=='play') {
+  audio_control.play();
+  //played_aud=true;
+  document.getElementById('audio-play-button').setAttribute('value','played');
+  document.getElementById('play-span-aud').setAttribute('class','glyphicon glyphicon-remove-circle');
+  document.getElementById('audio-play-button').disabled=true;
+  }
+}
+//var played_vid=false;
+function startvideo() {
+  if(document.getElementById('video-play-button').value=='play') {
+  video_control.play();
+  //played_vid=true;
+  document.getElementById('video-play-button').setAttribute('value','played');
+  document.getElementById('play-span-vid').setAttribute('class','glyphicon glyphicon-remove-circle');
+  document.getElementById('video-play-button').disabled=true;
+  }
+}
+</script>
+
+<script src="static/js/script_exp.js"></script>
+
+<div id="container-exp">
+	<div id="trial">
+		<div id="prompt"></div>
+		<br>
+		<div id="word"></div>
+		<div id="stim" align="center"></div>
+		<br>
+		<div id="audio" align="center"></div>
+    <div id="video" align="center"></div>
+    <div id="video-button" align="center"></div>
+    <br>
+    <div id="recording" align="center">
+
+        <div id="buttons" align="center">
+
+        <button type="button" id="audio-record-button" value="play" class="btn btn-warning btn-lg" onclick="startRecording(this);">
+          Record <span id="rec-span-aud" class="glyphicon glyphicon-record"></span>
+          </button>
+
+        <button type="button" id="audio-stop-button" value="play" class="btn btn-warning btn-lg" onclick="stopRecording(this);" disabled>
+          Stop <span id="stop-span-aud" class="glyphicon glyphicon-stop"></span>
+          </button>
+
+        </div>
+
+        <br>
+      
+        <div id="recordingslist" align="center"></div>
+
+        <br>
+        
+        <pre id="output" align="center"></pre>
+
+    </div>
+    <br>
+		<div id="query"></div>
+	</div>
+</div>

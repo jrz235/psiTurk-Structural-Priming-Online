@@ -1,0 +1,87 @@
+<script>
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
+</script>
+
+<script>
+var yourAudio = document.getElementById('audio-control');
+var played_aud=false;
+function startaudio() {
+  if(played_aud==false) {
+  yourAudio.play();
+  played_aud=true;
+  document.getElementById('play-span-aud').setAttribute('class','glyphicon glyphicon-remove-circle');
+  document.getElementById('audio-play-button').disabled=true;
+  }
+}
+</script>
+
+<div id="container-instructions">
+
+    <h1>Practice</h1>
+
+    <hr>
+
+    <div class="instructions well">
+
+        <p>
+            The following question is a practice example of <strong>Task 1</strong>. You can find the answer on the next page.
+        </p>
+        
+        <hr>
+
+        <p align="center">
+            Listen to the audio recording and make your selection.
+        </p>
+        
+        <br>
+
+        <div id="stim" align="center"><img src="static/images/tickle.JPG" alt="Example Image" width=350 height=350 style="border:3px solid #00BFFF; background:white" hspace=10 /> <img src="static/images/ride.JPG" alt="Example Image" width=350 height=350 style="border:3px solid #00BFFF; background:white" hspace=10 /></div>
+
+        <br>
+
+        <div id="audio" align="center"><audio id="audio-control">
+            <source src="static/audio/The boy tickled the penguin.wav" type="audio/wav">
+            Your browser does not support the audio element.
+
+        </audio>
+
+                <button type="button" id="audio-play-button" value="play" class="btn btn-info btn-lg" onclick="javascript:startaudio()">
+                Play Audio <span id="play-span-aud" class="glyphicon glyphicon-play-circle"></span>
+                </button>
+
+        </div>
+
+        <hr>
+
+        <p>
+            Click "Next" to continue.
+        </p>
+
+        <script type="text/javascript">
+        //console.log(psiTurk.getInstructionIndicator())
+        </script>
+
+    </div>
+
+    <hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg previous">
+                <span class="glyphicon glyphicon-circle-arrow-left"></span> Previous
+                </button>
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="javascript:endAudioStream();">
+                Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,89 @@
+<script>
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
+</script>
+
+<script>
+var age="na";
+function update_age() {
+  	age=document.getElementById('age_val').value;
+}
+</script>
+
+<script>
+var gender="na";
+function update_gender() {
+	var radios=document.getElementsByName('gender_buttons');
+	for (var i=0, length=radios.length; i<length; i++) {
+	    if (radios[i].checked) {
+	        gender=radios[i].value;
+			break;
+	    }
+	}
+}
+</script>
+
+<div id="container-instructions">
+
+	<h1>Demographics</h1>
+
+    <hr>
+
+	<div class="instructions well">
+
+    <p>
+      Please provide your age and gender.
+    </p>
+
+    <hr>
+
+    <form name="age" align="center">
+      <b>Age:</b>
+      <input type="text" id="age_val">
+    </form>
+
+    <br>
+
+    <form name="gender" align="center">
+      <b>Gender:</b>
+      <br>
+      <input type="radio" name="gender_buttons" value="male"> Male
+      <br>
+      <input type="radio" name="gender_buttons" value="female"> Female
+      <br>
+      <input type="radio" name="gender_buttons" value="trans"> Trans*
+      <br>
+      <input type="radio" name="gender_buttons" value="none"> Prefer not to disclose
+    </form>
+
+    <hr>
+
+    <p>
+        Click "Next" to continue.
+    </p>
+
+    <script type="text/javascript">
+    //console.log(psiTurk.getInstructionIndicator())
+    </script>
+
+	</div>
+
+	<hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            	<!-- no previous button on first screen -->
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="javascript:update_age();javascript:update_gender();javascript:endAudioStream();">
+                Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

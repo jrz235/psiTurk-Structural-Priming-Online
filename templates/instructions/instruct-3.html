@@ -1,0 +1,196 @@
+<script>
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
+</script>
+
+<script>
+var yourAudio = document.getElementById('audio-control');
+var played_aud=false;
+function startaudio() {
+  if(played_aud==false) {
+  yourAudio.play();
+  played_aud=true;
+  document.getElementById('play-span-aud').setAttribute('class','glyphicon glyphicon-remove-circle');
+  document.getElementById('audio-play-button').disabled=true;
+  }
+}
+var yourVideo = document.getElementById('video-control');
+var played_vid=false;
+function startvideo() {
+  if(played_vid==false) {
+  yourVideo.play();
+  played_vid=true;
+  document.getElementById('play-span-vid').setAttribute('class','glyphicon glyphicon-remove-circle');
+  document.getElementById('video-play-button').disabled=true;
+  }
+}
+</script>
+
+<div id="container-instructions">
+
+	<h1>Instructions</h1>
+
+	<hr>
+
+	<div class="instructions well">
+
+	    <p>
+		    In this experiment, you will go back and forth between performing two (2) tasks.
+	    </p>
+
+        <hr>
+
+        <p>
+            (1) For the <strong>first task</strong>, you will see two images. You will then listen to an audio recording describing an event. Your job is to select which of the two (2) images the recording described. <strong>During the experiment, you may only listen to each audio recording once.</strong>
+        </p>
+
+        <p>
+            To make your selection, type the LEFT ARROW KEY (&#8592;) if you think that the image on the LEFT is a match and the RIGHT ARROW KEY (&#8594;) if you think that the image on the RIGHT is a match. You will automatically advance to the next task.
+        </p>
+
+        <p>
+            You can see an example of this task below.
+        </p>
+	    
+        <hr>
+
+        <p align="center">
+            Listen to the audio recording and make your selection.
+        </p>
+        
+        <br>
+
+        <div id="stim" align="center">
+          <img src="static/images/catch.JPG" alt="Example Image" width=350 height=350 style="border:3px solid #00BFFF; background:white" hspace=10 />
+          <img src="static/images/kiss.JPG" alt="Example Image" width=350 height=350 style="border:3px solid #00BFFF; background:white" hspace=10 />
+        </div>
+
+        <br>
+
+        <div id="audio" align="center"><audio id="audio-control">
+            <source src="static/audio/The girl kissed the frog.wav" type="audio/wav">
+            Your browser does not support the audio element.
+
+        </audio>
+
+                <button type="button" id="audio-play-button" value="play" class="btn btn-info btn-lg" onclick="javascript:startaudio()">
+                Play Audio <span id="play-span-aud" class="glyphicon glyphicon-play-circle"></span>
+                </button>
+
+        </div>
+
+        <hr>
+
+        <p>
+            (2) For the <strong>second task</strong>, you will see a short video with a word above it. Your job is:
+        </p>
+
+        <ul>
+        <li>
+        a. to watch the video, and
+        <br>
+        b. to record yourself describing the video using the word provided.
+        </ul>
+
+        <p>
+            <strong>During the experiment, you may only play each video once.</strong>
+        </p>
+
+        <p>
+            To record your response, click the "Record" button and speak into your microphone. Then click "Stop" when you are finished. <strong>During the experiment, you may only make one recording per question.</strong> On these questions, you must type "N" to advance to the next task.
+        </p>
+
+        <p>
+            You can see an example of this task below.
+        </p>
+
+        <hr>
+
+        <p align="center">
+            Watch the video and record your description.
+        </p>
+
+        <br>
+
+        <p align="center"><strong>HOLD</strong></p>
+
+        <br>
+        
+        <div id="video" align="center"><video width=350 height=350 style="border:3px solid #32CD32; background:white" hspace=10 id="video-control">
+            <source src="static/video/The man holding the plate and spoon.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+                <br>
+
+                <button type="button" id="video-play-button" value="play" class="btn btn-success btn-lg" onclick="javascript:startvideo()">
+                Play Video <span id="play-span-vid" class="glyphicon glyphicon-play-circle"></span>
+                </button>
+
+        </div>
+
+        <br>
+        
+        <div id="recording" align="center">
+
+        <div id="buttons" align="center">
+
+        <button type="button" id="audio-record-button" value="play" class="btn btn-warning btn-lg" onclick="startRecording(this);">
+            Record <span id="rec-span-aud" class="glyphicon glyphicon-record"></span>
+            </button>
+
+        <button type="button" id="audio-stop-button" value="play" class="btn btn-warning btn-lg" onclick="stopRecording(this);" disabled>
+            Stop <span id="stop-span-aud" class="glyphicon glyphicon-stop"></span>
+            </button>
+        
+        </div>
+
+        <br>
+        
+        <div id="recordingslist" align="center"></div>
+
+        <br>
+        
+        <pre id="output" align="center"></pre>
+
+        </div>
+
+        <hr>
+
+        <p>
+            <strong>Continue answering all questions until you have completed the experiment.</strong>
+        </p>
+        
+        <hr>
+
+        <p>
+            Click "Next" below to practice each of the two (2) tasks.
+        </p>
+
+	    <script type="text/javascript">
+	    //console.log(psiTurk.getInstructionIndicator())
+	    </script>
+
+      <script src="static/js/script_instr.js"></script>
+
+	</div>
+
+	<hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            	<!-- no previous button on first screen -->
+            </div>
+            <div class="col-xs-8">
+            </div>
+            <div class="col-xs-2">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue" onclick="javascript:endAudioStream();">
+                Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
