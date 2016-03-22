@@ -12,8 +12,8 @@ Standard psycholinguistic production structural priming task online using psiTur
 # usual psiTurk things ('congif.txt' file)
 1. input AWS/psiTurk Access keys
 2. change 'host' to IP address of hosting server
-3. change contact email and organization name
 
 # ***IMPORTANT***
 1. change all relevant text/contact info in 'templates/ad.html', 'templates/consent.html',
 and 'templates/postquestionnaire.html' (debriefing)
+2. change contact email and organization name in 'config.txt' file
