@@ -8,6 +8,8 @@ Standard psycholinguistic production structural priming task online using psiTur
 2. requires secure connection - I used OpenShift, but you can also use Amazon EC2 and an SSL Certificate
 3. uses PHP to write files to secure respository: change 'SERVER URL' in 'static/js/script*.js' files (4 of them) to appropriate path
 4. change 'OPENSHIFT URL' in 'templates/ad.html' to OpenShift or EC2 path
+5. change 'LOGO URL' in 'templates/ad.html' to path where image (university shield, etc.) is hosted
+6. replace 'static/favicon.ico'
 
 # usual psiTurk things ('congif.txt' file)
 1. input AWS/psiTurk Access keys
