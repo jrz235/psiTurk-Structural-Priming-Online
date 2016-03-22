@@ -18,3 +18,6 @@ Standard psycholinguistic production structural priming task online using psiTur
 # ***IMPORTANT***
 1. change all relevant text/contact info in 'templates/ad.html', 'templates/consent.html', and 'templates/postquestionnaire.html' (debriefing)
 2. change contact email and organization name in 'config.txt' file
+
+# citation
+Ziegler, J., & Snedeker, J. (2016). Toward a comprehensive view of structural priming: What gets primed when. 29th Annual Meeting of the CUNY Conference on Human Sentence Processing, Gainesville, FL.
